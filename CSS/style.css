@@ -76,7 +76,7 @@ header > a {
 
 .headline-page::before {
   content: "";
-  background-image: url(/assets/shining.png);
+  background-image: url(../assets/shining.png);
   background-size: cover;
   position: absolute;
   top: 0px;
@@ -90,7 +90,7 @@ header > a {
 
 .headline-page::after {
   content: "";
-  background-image: url(/assets/Union_circles.png);
+  background-image: url(../assets/Union_circles.png);
   background-size: cover;
   position: absolute;
   top: 0px;

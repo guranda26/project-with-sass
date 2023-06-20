@@ -1,0 +1,197 @@
+@import "variables";
+@import "mix";
+@import "pseudoel";
+// @import "button";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: $background-color;
+
+  .headline {
+    height: 800px;
+    background-color: #3d3131;
+    @include bgstyle(cover, no-repeat);
+    background-position: bottom, right, center;
+    animation: changebackground 3s ease infinite;
+    /*The code of the animation is in animation.css folder */
+
+    .headline::before {
+      @include before;
+    }
+
+    .headline::after {
+      @include after;
+    }
+
+    .intro {
+      display: flex;
+      justify-content: space-between;
+
+      .intro__header {
+        height: 150px;
+        width: 100vw;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+
+        .intro__list {
+          display: flex;
+          gap: 40px;
+          margin-right: 150px;
+
+          .intro__list--item {
+            display: inline-block;
+            list-style: none;
+            @include fonts($main-font, 14px, 400);
+            text-align: left;
+            letter-spacing: 0.2em;
+          }
+        }
+
+        .intro__project {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: $primary-color;
+          display: inline-block;
+        }
+        .intro__project--main {
+          margin-left: 100px;
+          letter-spacing: 0.1em;
+          margin-right: 20px;
+          @include fonts($main-font, 20px, normal);
+        }
+      }
+    }
+    .app__headline--main {
+      color: $primary-color;
+      margin-bottom: 40px;
+      margin-top: 20px;
+    }
+
+    .third__headline {
+      color: $primary-color;
+      margin-bottom: 40px;
+    }
+  }
+
+  .section-headline {
+    background-color: $background-color;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .app__headline--text {
+      @include fonts($main-font, 16px, 400);
+      text-align: left;
+      color: $third-headline;
+      line-height: 22px;
+    }
+
+    .app__headline--second {
+      margin: 25px;
+      color: $second-headline;
+    }
+
+    .third__headline {
+      margin-bottom: 25px;
+      color: $third-headline;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      column-gap: 50px;
+      margin: 30px 150px;
+      align-content: center;
+    }
+
+    // .app-section__button--read-more {
+    //   @extend %app-section__button--read-more;
+    // }
+  }
+
+  .learn-more {
+    background-image: url(../assets/background-2.png);
+    @include bgstyle(cover, no-repeat);
+    background-color: $section-bg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .app-section {
+    width: 100%;
+    height: 100vh;
+
+    .headline__text--styles {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .app__headline {
+      @include fonts($secondary-font, 48px, 700);
+      line-height: 64px;
+      text-align: center;
+    }
+
+    .third__headline {
+      @include fonts($main-font, 24px, 400);
+      line-height: 32px;
+      text-align: center;
+    }
+
+    // .app-section__button {
+    //   @extend %btn;
+    //   color: white;
+    // }
+
+    .app-section__button--read-more {
+      color: blue;
+      border-radius: 18px;
+      letter-spacing: 0.1em;
+      padding: 5px 18px;
+      margin-bottom: 40px;
+    }
+
+    .app-section__button--learn-more {
+      font-family: $secondary-font;
+      margin-bottom: 50px;
+      font-size: 70px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .app__headline--last {
+    color: $primary-color;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+  .footer {
+    height: 170px;
+    background-color: #464547;
+    padding-left: 140px;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-content: stretch;
+  }
+}

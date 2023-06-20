@@ -1,0 +1,10 @@
+@mixin fonts($font, $size, $weight) {
+  font-family: $font;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin bgstyle($bgsize, $bgrepeat) {
+  background-size: $bgsize;
+  background-repeat: $bgrepeat;
+}

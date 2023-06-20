@@ -158,24 +158,36 @@
   line-height: 32px;
   text-align: center;
 }
-.container .app-section .app-section__button {
-  padding: 5px 18px;
-  background: #55c2d8;
+.container .app-section .app-section__button--read-more {
+  color: blue;
   border-radius: 18px;
-  font-family: Oswald, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 26px;
   letter-spacing: 0.1em;
-  text-align: center;
-  border: #55c2d8;
+  padding: 5px 18px;
   margin-bottom: 40px;
-  color: #fff;
+}
+.container .app-section .app-section__button--learn-more {
+  font-family: Oswald, sans-serif;
+  margin-bottom: 50px;
+  font-size: 70px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .container .app__headline--last {
   color: #fffbfb;
   margin-bottom: 40px;
   margin-top: 20px;
 }
-
-/*# sourceMappingURL=style.css.map */
+.container .footer {
+  height: 170px;
+  background-color: #464547;
+  padding-left: 140px;
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-content: stretch;
+}/*# sourceMappingURL=styles.css.map */

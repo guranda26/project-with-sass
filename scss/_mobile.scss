@@ -1,0 +1,147 @@
+@media (max-width: 1045px) {
+  .app-section {
+    min-height: 100vh;
+    height: auto;
+
+    .headline::before,
+    .headline::after {
+      display: none;
+    }
+
+    .headline {
+      background-image: url(/assets/Desktop_Backgrounds.png);
+      @include bgstyle(cover, no-repeat);
+      background-position: 100% center, right, right;
+      orientation: portrait;
+      animation: smallbackground 3s ease infinite;
+      //  The code of the animation is  in animation.css folder //
+
+      .intro {
+        justify-content: space-around;
+
+        .intro__project--main {
+          margin-left: 0;
+        }
+
+        .intro__list {
+          display: flex;
+          justify-content: flex-end;
+          gap: 0;
+          margin-right: 0;
+        }
+      }
+    }
+    .headline__text--styles,
+    .section-grid {
+      margin: 15px 50px;
+      column-gap: 40px;
+    }
+  }
+
+  .app__headline {
+    font-size: 40px;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+
+  .third__headline {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro__header {
+    height: auto;
+    margin-bottom: 80px;
+
+    &__project--main {
+      margin-left: 10px;
+    }
+
+    .intro__list {
+      display: none;
+
+      &__list--item {
+        display: none;
+      }
+    }
+
+    &__icon {
+      display: unset;
+    }
+  }
+
+  .app__headline {
+    font-size: 40px;
+  }
+
+  .app__headline--main {
+    margin-bottom: 30px;
+  }
+
+  .third__headline {
+    font-size: 20px;
+  }
+
+  .section-headline {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .app__headline--second {
+      width: 70%;
+      line-height: normal;
+    }
+
+    .third__headline {
+      width: 100%;
+    }
+
+    .app__headline--text {
+      font-size: 16px;
+      margin: 20px 10px;
+    }
+
+    .headline__text--styles {
+      display: unset;
+      margin: 10px;
+    }
+  }
+
+  .app-section__button--learn-more {
+    font-size: 45px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+  }
+  .footer {
+    margin: 0;
+    padding: 0;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__info {
+      margin-top: 20px;
+    }
+
+    &__logo {
+      margin-top: 40px;
+    }
+
+    &__info--address {
+      height: auto;
+    }
+
+    &__address {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+    }
+
+    &__copyright {
+      margin-bottom: 50px;
+    }
+  }
+}

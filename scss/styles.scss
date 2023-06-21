@@ -1,7 +1,7 @@
 @import "variables";
 @import "mix";
 @import "pseudoel";
-// @import "button";
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@
 
   .headline {
     height: 800px;
-    background-color: #3d3131;
+    background-color: $secondbg;
     @include bgstyle(cover, no-repeat);
     background-position: bottom, right, center;
     animation: changebackground 3s ease infinite;
@@ -64,6 +64,13 @@
           margin-right: 20px;
           @include fonts($main-font, 20px, normal);
         }
+
+        .intro__icon {
+          display: none;
+          font-family: $main-font;
+          font-size: 20px;
+          color: $primary-color;
+        }
       }
     }
     .app__headline--main {
@@ -111,10 +118,6 @@
       margin: 30px 150px;
       align-content: center;
     }
-
-    // .app-section__button--read-more {
-    //   @extend %app-section__button--read-more;
-    // }
   }
 
   .learn-more {
@@ -125,6 +128,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    .third__headline {
+      color: $primary-color;
+    }
   }
 
   .app-section {
@@ -152,20 +159,18 @@
       text-align: center;
     }
 
-    // .app-section__button {
-    //   @extend %btn;
-    //   color: white;
-    // }
-
     .app-section__button--read-more {
-      color: blue;
+      @extend %app-section__button;
       border-radius: 18px;
+      @include fonts($secondary-font, 14px, 400);
       letter-spacing: 0.1em;
-      padding: 5px 18px;
+      text-align: center;
       margin-bottom: 40px;
+      margin-left: 50%;
     }
 
     .app-section__button--learn-more {
+      @extend %app-section__button;
       font-family: $secondary-font;
       margin-bottom: 50px;
       font-size: 70px;
@@ -186,12 +191,56 @@
 
   .footer {
     height: 170px;
-    background-color: #464547;
+    background-color: $second-headline;
     padding-left: 140px;
     padding-top: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     align-content: stretch;
+
+    &__info {
+      color: transparentize($footer-txt, 0.4);
+      font-style: normal;
+      align-items: center;
+      @include fonts($main-font, 16px, 400);
+      letter-spacing: 1.2;
+
+      .footer__address--span {
+        display: block;
+      }
+    }
+
+    &__mail {
+      margin-top: 0;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+
+      .footer__info--mail {
+        text-decoration: none;
+        color: transparentize($footer-txt, 0.4);
+      }
+    }
+
+    .footer__info--project {
+      margin-left: 8px;
+      color: $primary-color;
+      @include fonts($main-font, 18px, 400);
+      line-height: 16px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      line-height: 32px;
+      text-align: center;
+    }
+  }
+
+  .footer__copyright {
+    grid-column: 3 / 4;
+    grid-row: 2 / -1;
+    align-self: center;
   }
 }
+@import "animation";
+@import "buttons";
+@import "mobile";

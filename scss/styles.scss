@@ -66,10 +66,10 @@
         }
 
         .intro__icon {
-          display: none;
           font-family: $main-font;
           font-size: 20px;
           color: $primary-color;
+          display: none;
         }
       }
     }
@@ -132,6 +132,19 @@
     .third__headline {
       color: $primary-color;
     }
+
+    .app-section__button--learn-more {
+      @extend %app-section__button;
+      font-family: $button-font;
+      margin-bottom: 50px;
+      font-size: 70px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   .app-section {
@@ -167,19 +180,6 @@
       text-align: center;
       margin-bottom: 40px;
       margin-left: 50%;
-    }
-
-    .app-section__button--learn-more {
-      @extend %app-section__button;
-      font-family: $secondary-font;
-      margin-bottom: 50px;
-      font-size: 70px;
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
   }
 
@@ -241,6 +241,7 @@
     align-self: center;
   }
 }
-@import "animation";
+
 @import "buttons";
+@import "animation";
 @import "mobile";

@@ -1,7 +1,7 @@
+
 %app-section__button {
   background: $button-color;
   color: $primary-color;
-  @include fonts($secondary-font, 14px, 400);
   border: $button-color;
   padding: 5px 18px;
   line-height: 26px;

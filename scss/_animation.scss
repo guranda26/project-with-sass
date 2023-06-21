@@ -24,31 +24,33 @@
     transform-origin: left bottom;
   }
 }
-.app-section__button--learn-more:hover {
-  background-color: #fff;
-  color: #55c2d8;
-  transition: all 1s linear;
-}
 
+.learn-more {
+  .app-section__button--learn-more:hover {
+    background-color: #fff;
+    color: #55c2d8;
+    transition: all 1s linear;
+  }
+}
 // /*The second task */
 
 @keyframes changebackground {
   0% {
-    background-image: url(/assets/Union_circles.png),
+    background-image: url("../assets/Union_circles.png"),
       url("../assets/Desktop_Backgrounds.png");
     background-position: bottom, center;
     background-origin: inherit;
   }
 
   50% {
-    background-image: url(/assets/Union_circles.png),
+    background-image: url("../assets/Union_circles.png"),
       url("../assets/Desktop_Backgrounds.png");
     background-position: center, center;
   }
 
   100% {
-    background-image: url(/assets/Union_circles.png), url(/assets/shining.png),
-      url("../assets/Desktop_Backgrounds.png");
+    background-image: url("../assets/Union_circles.png"),
+      url("../assets/shining.png"), url("../assets/Desktop_Backgrounds.png");
     background-position: bottom, right, center;
   }
 }
@@ -61,7 +63,7 @@
   }
 
   50% {
-    background-image: url(../assets/Union_circles.png),
+    background-image: url("../assets/Union_circles.png"),
       url("../assets/Desktop_Backgrounds.png");
     background-position: left, fixed;
     transform: translateY(100px, 0);
@@ -69,8 +71,8 @@
     background-repeat: no-repeat;
   }
   100% {
-    background-image: url(../assets/Union_circles.png),
-      url(../assets/shining.png), url("../assets/Desktop_Backgrounds.png");
+    background-image: url("../assets/Union_circles.png"),
+      url("../assets/shining.png"), url("../assets/Desktop_Backgrounds.png");
     background-position: center, 100% center, fixed;
     transform: scale(0.5, 0.5 1);
     transform: translateY(100px, 200px, 0);

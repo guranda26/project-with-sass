@@ -18,7 +18,7 @@
 }
 .container .headline .headline::before {
   content: "";
-  background-image: url(../assets/shining.png);
+  background-image: url("../assets/shining.png");
   background-size: cover;
   position: absolute;
   top: 0px;
@@ -31,7 +31,7 @@
 }
 .container .headline .headline::after {
   content: "";
-  background-image: url(../assets/Union_circles.png);
+  background-image: url("../assets/Union_circles.png");
   background-size: cover;
   position: absolute;
   top: 0px;
@@ -82,10 +82,10 @@
   font-weight: normal;
 }
 .container .headline .intro .intro__header .intro__icon {
-  display: none;
   font-family: "Source Sans Pro";
   font-size: 20px;
   color: #fffbfb;
+  display: none;
 }
 .container .headline .app__headline--main {
   color: #fffbfb;
@@ -141,6 +141,17 @@
 .container .learn-more .third__headline {
   color: #fffbfb;
 }
+.container .learn-more .app-section__button--learn-more {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 50px;
+  font-size: 70px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .container .app-section {
   width: 100%;
   height: 100vh;
@@ -176,17 +187,6 @@
   text-align: center;
   margin-bottom: 40px;
   margin-left: 50%;
-}
-.container .app-section .app-section__button--learn-more {
-  font-family: Oswald, sans-serif;
-  margin-bottom: 50px;
-  font-size: 70px;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .container .app__headline--last {
   color: #fffbfb;
@@ -243,6 +243,15 @@
   align-self: center;
 }
 
+.container .learn-more .app-section__button--learn-more, .container .app-section .app-section__button--read-more {
+  background: #55c2d8;
+  color: #fffbfb;
+  border: #55c2d8;
+  padding: 5px 18px;
+  line-height: 26px;
+  text-align: center;
+}
+
 .logo-animation:hover {
   animation: changelogo 4s 1s ease;
 }
@@ -266,7 +275,7 @@
   transform-origin: left bottom;
 }
 
-.app-section__button--learn-more:hover {
+.learn-more .app-section__button--learn-more:hover {
   background-color: #fff;
   color: #55c2d8;
   transition: all 1s linear;
@@ -274,16 +283,16 @@
 
 @keyframes changebackground {
   0% {
-    background-image: url(/assets/Union_circles.png), url("../assets/Desktop_Backgrounds.png");
+    background-image: url("../assets/Union_circles.png"), url("../assets/Desktop_Backgrounds.png");
     background-position: bottom, center;
     background-origin: inherit;
   }
   50% {
-    background-image: url(/assets/Union_circles.png), url("../assets/Desktop_Backgrounds.png");
+    background-image: url("../assets/Union_circles.png"), url("../assets/Desktop_Backgrounds.png");
     background-position: center, center;
   }
   100% {
-    background-image: url(/assets/Union_circles.png), url(/assets/shining.png), url("../assets/Desktop_Backgrounds.png");
+    background-image: url("../assets/Union_circles.png"), url("../assets/shining.png"), url("../assets/Desktop_Backgrounds.png");
     background-position: bottom, right, center;
   }
 }
@@ -294,14 +303,14 @@
     background-origin: right;
   }
   50% {
-    background-image: url(../assets/Union_circles.png), url("../assets/Desktop_Backgrounds.png");
+    background-image: url("../assets/Union_circles.png"), url("../assets/Desktop_Backgrounds.png");
     background-position: left, fixed;
     transform: translateY(100px, 0);
     background-origin: center;
     background-repeat: no-repeat;
   }
   100% {
-    background-image: url(../assets/Union_circles.png), url(../assets/shining.png), url("../assets/Desktop_Backgrounds.png");
+    background-image: url("../assets/Union_circles.png"), url("../assets/shining.png"), url("../assets/Desktop_Backgrounds.png");
     background-position: center, 100% center, fixed;
     transform: scale(0.5, 0.5 1);
     transform: translateY(100px, 200px, 0);
@@ -309,113 +318,53 @@
     background-origin: center, right, center;
   }
 }
-.container .app-section .app-section__button--read-more, .container .app-section .app-section__button--learn-more {
-  background: #55c2d8;
-  color: #fffbfb;
-  font-family: Oswald, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  border: #55c2d8;
-  padding: 5px 18px;
-  line-height: 26px;
-  text-align: center;
-}
-
-@media (max-width: 1045px) {
-  .app-section {
-    min-height: 100vh;
-    height: auto;
-  }
-  .app-section .headline::before,
-.app-section .headline::after {
-    display: none;
-  }
-  .app-section .headline {
-    background-image: url(/assets/Desktop_Backgrounds.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 100% center, right, right;
-    orientation: portrait;
-    animation: smallbackground 3s ease infinite;
-  }
-  .app-section .headline .intro {
+@media (max-width: 768px) {
+  .container .headline .intro .intro__header {
+    display: flex;
     justify-content: space-around;
   }
-  .app-section .headline .intro .intro__project--main {
-    margin-left: 0;
+  .container .headline .intro .intro__header .intro__project--main {
+    margin-left: 10px;
   }
-  .app-section .headline .intro .intro__list {
-    display: flex;
-    justify-content: flex-end;
-    gap: 0;
-    margin-right: 0;
-  }
-  .app-section .headline__text--styles,
-.app-section .section-grid {
-    margin: 15px 50px;
-    column-gap: 40px;
-  }
-  .app__headline {
-    font-size: 40px;
-    line-height: normal;
-    margin-bottom: 20px;
-  }
-  .third__headline {
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 768px) {
-  .intro__header {
+  .container .headline .intro .intro__header .intro__nav {
     height: auto;
     margin-bottom: 80px;
   }
-  .intro__header__project--main {
-    margin-left: 10px;
-  }
-  .intro__header .intro__list {
+  .container .headline .intro .intro__header .intro__nav .intro__list,
+.container .headline .intro .intro__header .intro__nav .intro__list--item {
     display: none;
   }
-  .intro__header .intro__list__list--item {
-    display: none;
+  .container .headline .intro .intro__header .intro__nav .intro__icon {
+    display: inline-block;
   }
-  .intro__header__icon {
-    display: unset;
-  }
-  .app__headline {
-    font-size: 40px;
-  }
-  .app__headline--main {
+  .container .headline .intro__text .app__headline {
     margin-bottom: 30px;
+    color: red;
   }
-  .third__headline {
-    font-size: 20px;
-  }
-  .section-headline {
+  .container .section-headline {
     margin-top: 50px;
     margin-bottom: 50px;
   }
-  .section-headline .app__headline--second {
+  .container .section-headline .headline__text--styles {
+    display: block;
+    margin: 10px;
+  }
+  .container .section-headline .headline__text--styles .app__headline--second {
     width: 70%;
     line-height: normal;
   }
-  .section-headline .third__headline {
-    width: 100%;
-  }
-  .section-headline .app__headline--text {
+  .container .section-headline .section-grid {
     font-size: 16px;
-    margin: 20px 10px;
+    margin: 15px 17px;
+    display: block;
   }
-  .section-headline .headline__text--styles {
-    display: unset;
-    margin: 10px;
-  }
-  .app-section__button--learn-more {
+  .container .learn-more .app-section__button--learn-more {
     font-size: 45px;
     text-align: center;
     width: 100px;
     height: 100px;
   }
-  .footer {
+  .container .footer {
     margin: 0;
     padding: 0;
     min-height: 200px;
@@ -423,22 +372,79 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
-  .footer__info {
+  .container .footer__info {
     margin-top: 20px;
   }
-  .footer__logo {
+  .container .footer__logo {
     margin-top: 40px;
   }
-  .footer__info--address {
+  .container .footer__info--address {
     height: auto;
   }
-  .footer__address {
+  .container .footer__info--address .footer__address {
     display: flex;
     flex-direction: column;
     justify-items: center;
   }
-  .footer__copyright {
+  .container .footer__copyright {
     margin-bottom: 50px;
+  }
+  .container .app__headline {
+    font-size: 40px;
+  }
+  .container .third__headline {
+    font-size: 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1045px) {
+  .container .app-section {
+    min-height: 100vh;
+    height: auto;
+  }
+  .container .headline {
+    background-image: url(/assets/Desktop_Backgrounds.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% center, right, right;
+    orientation: portrait;
+    animation: smallbackground 3s ease infinite;
+  }
+  .container .headline .intro {
+    justify-content: space-around;
+  }
+  .container .headline .intro .intro__header .intro__project--main {
+    margin-left: 0;
+  }
+  .container .headline .intro .intro__header .intro__nav .intro__list {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-right: 0;
+  }
+  .container .section-headline .headline__text--styles {
+    margin: 15px 50px;
+    column-gap: 40px;
+  }
+  .container .headline::before,
+.container .headline::after {
+    display: none;
+  }
+  .container .app__headline {
+    font-size: 40px;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+  .container .third__headline {
+    margin-bottom: 20px;
+  }
+  .container .learn-more .app-section__button--learn-more {
+    font-size: 50px;
+    text-align: center;
+    width: 125;
+    height: 125px;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -1,6 +1,6 @@
 @mixin before {
   content: "";
-  background-image: url(../assets/shining.png);
+  background-image: url("../assets/shining.png");
   background-size: cover;
   position: absolute;
   top: 0px;
@@ -14,7 +14,7 @@
 
 @mixin after {
   content: "";
-  background-image: url(../assets/Union_circles.png);
+  background-image: url("../assets/Union_circles.png");
   background-size: cover;
   position: absolute;
   top: 0px;

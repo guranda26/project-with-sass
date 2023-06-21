@@ -27,8 +27,8 @@
 
 .learn-more {
   .app-section__button--learn-more:hover {
-    background-color: #fff;
-    color: #55c2d8;
+    background-color: $primary-color;
+    color: $button-color;
     transition: all 1s linear;
   }
 }
